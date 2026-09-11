@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Day 1: Decision Rights and Delegation for Technical Leads.">
+  <title>Day 01 — Decision Rights & Delegation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="lesson.css">
+</head>
+<body class="lesson-body">
+  <header class="lesson-topbar">
+    <a class="brand" href="../index.html"><span class="brand-mark">TL</span><span>Technical Lead Learning</span></a>
+    <div class="lesson-position"><span>Day 01 of 90</span><div><i></i></div></div>
+  </header>
+  <main class="lesson-layout">
+    <aside class="lesson-toc">
+      <span class="toc-label">In this lesson</span>
+      <nav aria-label="Lesson contents">
+        <a href="#why">Why this matters</a><a href="#core">Core concept</a><a href="#works">How it works</a><a href="#example">Startup example</a><a href="#tradeoffs">Trade-offs</a><a href="#role">Your role</a><a href="#questions">Questions to ask</a><a href="#tomorrow">Apply tomorrow</a>
+      </nav>
+      <div class="toc-time"><strong>≈ 20 min</strong><span>Read + reflection</span></div>
+    </aside>
+
+    <article class="lesson-article">
+      <header class="lesson-hero">
+        <span class="eyebrow">Today’s topic · Engineering leadership</span>
+        <h1>Decision Rights<br>&amp; Delegation</h1>
+        <p>How to create fast, autonomous technical decision-making without losing ecosystem coherence.</p>
+        <div class="hero-rule"><span></span><strong>Foundation 01</strong></div>
+      </header>
+
+      <section id="why"><span class="section-index">01</span><h2>Why I Need This as a Technical Lead</h2>
+        <p>Your role spans ecosystem architecture, planning, hiring, standards, integrations, and support for three engineering Team Leads. That breadth makes one failure mode especially dangerous: every meaningful decision begins to flow through you.</p>
+        <p>At first, central approval feels like technical control. As the ecosystem grows, it becomes queueing delay. Teams stop developing judgment, Team Leads become coordinators instead of leaders, and you lose the time needed for cross-product risks and future architecture.</p>
+        <div class="callout"><strong>The goal</strong><p>Keep ecosystem-wide decisions aligned while moving local decisions to the people with the best context.</p></div>
+      </section>
+
+      <section id="core"><span class="section-index">02</span><h2>Core Concept</h2>
+        <p><strong>Decision rights</strong> define who has authority to make a class of decisions, who must contribute, and who only needs visibility. Delegation is not merely assigning work. It is transferring an appropriate level of decision authority while keeping explicit constraints and accountability.</p>
+        <p>Good technical governance separates decisions by <em>blast radius</em>, <em>reversibility</em>, and <em>cross-team coupling</em>:</p>
+        <div class="concept-grid">
+          <div><b>Local</b><span>Reversible, one team, contained impact</span><strong>Team decides</strong></div>
+          <div><b>Cross-team</b><span>Shared contract, multiple delivery plans</span><strong>Named owner + reviewers</strong></div>
+          <div><b>Ecosystem</b><span>Long-lived constraint or broad risk</span><strong>Technical Lead owns</strong></div>
+          <div><b>Company-level</b><span>Strategy, major cost, legal or existential risk</span><strong>CTO owns</strong></div>
+        </div>
+        <p>Authority should be placed at the lowest level that has enough context and competence to manage the consequences. “Lowest” is not about hierarchy—it means closest to the work without ignoring wider effects.</p>
+      </section>
+
+      <section id="works"><span class="section-index">03</span><h2>How It Works</h2>
+        <h3>1. Classify the decision</h3><p>Ask: How difficult is this to reverse? How many products or teams can it affect? Does it establish a precedent or standard? What happens if it is wrong?</p>
+        <h3>2. Name one decider</h3><p>Collaboration can include many people; decision ownership cannot be a vague group. One person decides and is accountable for collecting the necessary input.</p>
+        <h3>3. State guardrails</h3><p>Provide constraints rather than prescribing the solution: required security posture, supported platforms, budget ceiling, compatibility promises, SLOs, or approved strategic direction.</p>
+        <h3>4. Match review depth to risk</h3><p>A reversible library choice may need a short Team Lead note. A shared identity model may need an RFC and architecture review. Review effort should follow consequence, not seniority.</p>
+        <h3>5. Record only durable decisions</h3><p>Use a short Architecture Decision Record when a decision creates a lasting constraint. Do not document every implementation detail as an ADR.</p>
+        <div class="flow" aria-label="Decision delegation flow">
+          <div><strong>Decision</strong><small>What is changing?</small></div><i>→</i><div><strong>Scope</strong><small>Who feels the impact?</small></div><i>→</i><div><strong>Owner</strong><small>Who has authority?</small></div><i>→</i><div><strong>Guardrails</strong><small>What must stay true?</small></div>
+        </div>
+      </section>
+
+      <section id="example"><span class="section-index">04</span><h2>Example From Our Startup</h2>
+        <p>Suppose a backend team needs asynchronous processing for device telemetry. The engineer proposes a message broker. This appears local, but the choice may influence device ingestion, AI pipelines, observability, DevOps workload, and future product integrations.</p>
+        <div class="example-box"><h3>Split the decision instead of centralizing everything</h3>
+          <ul><li><strong>Team Lead owns:</strong> consumer structure, retry implementation, internal module boundaries, and delivery plan.</li><li><strong>Technical Lead owns:</strong> whether this becomes a shared ecosystem capability, integration principles, event ownership, and compatibility guardrails.</li><li><strong>DevOps advises:</strong> operational burden, deployment, monitoring, recovery, and realistic capacity.</li><li><strong>QA Lead advises:</strong> contract, failure, replay, duplication, and end-to-end test strategy.</li><li><strong>Tech Owner contributes:</strong> future product use cases, priority, and acceptable user-facing behavior.</li><li><strong>CTO joins if:</strong> the choice creates material recurring cost, strategic platform commitment, hiring implications, or significant business risk.</li></ul>
+        </div>
+        <p>You do not choose every queue configuration. You ensure the wider decision has a clear owner, the right contributors, and constraints that protect the ecosystem.</p>
+      </section>
+
+      <section id="tradeoffs"><span class="section-index">05</span><h2>Trade-offs</h2>
+        <div class="tradeoff-table"><div class="th">Approach</div><div class="th">Benefit</div><div class="th">Risk</div><div>Central approval</div><div>Consistency during early chaos or crisis</div><div>Bottleneck, weak Team Leads, slow learning</div><div>Full team autonomy</div><div>Speed and local ownership</div><div>Fragmentation and duplicated infrastructure</div><div>Bounded autonomy</div><div>Local speed within ecosystem guardrails</div><div>Requires clear boundaries and capable owners</div></div>
+        <p>Do not introduce a heavy decision-rights framework for a five-minute reversible choice. Conversely, do not use “team autonomy” to avoid governing decisions that create cross-product coupling.</p>
+      </section>
+
+      <section id="role"><span class="section-index">06</span><h2>What I Should Do as Technical Lead</h2>
+        <div class="role-list">
+          <div><strong>Personally do</strong><p>Define decision classes and ecosystem guardrails; own high-impact cross-system decisions; coach Team Leads on trade-offs; resolve unclear ownership.</p></div>
+          <div><strong>Delegate</strong><p>Local architecture, implementation choices, technical spikes, and recommendations within a team’s boundary.</p></div>
+          <div><strong>Team Leads own</strong><p>Technical quality and decisions within their systems, surfacing decisions whose consequences escape that boundary.</p></div>
+          <div><strong>CTO involvement</strong><p>Company strategy, irreversible platform commitments, exceptional cost, organizational structure, and risk beyond the ecosystem.</p></div>
+          <div><strong>Tech Owner involvement</strong><p>Product outcomes, priority, product trade-offs, user impact, and future capabilities that change decision context.</p></div>
+          <div><strong>PM involvement</strong><p>Schedule and dependency visibility, coordination, decision deadlines, and communicating planning impact—not deciding technical architecture.</p></div>
+        </div>
+      </section>
+
+      <section id="questions"><span class="section-index">07</span><h2>Questions I Should Ask</h2>
+        <ol class="question-list"><li>Who is the single decider for this decision?</li><li>Is the decision local, cross-team, ecosystem-wide, or company-level?</li><li>What is the cost of reversing it in three months?</li><li>Which teams or products inherit constraints from this choice?</li><li>What guardrails must remain true regardless of the chosen solution?</li><li>Whose expertise is required as input, but not approval?</li><li>What evidence would justify escalating this decision?</li><li>Am I reviewing because the risk requires it, or because I am uncomfortable letting go?</li></ol>
+      </section>
+
+      <section><span class="section-index">08</span><h2>Practical Technique</h2>
+        <h3>The 60-second decision contract</h3><p>At the start of a technical discussion, state four lines:</p>
+        <div class="template"><code>DECISION: What must be decided?<br>DECIDER: Who makes the final call?<br>INPUT: Who must be consulted?<br>GUARDRAILS: What constraints cannot be violated?</code></div>
+        <p>This prevents meetings from becoming open-ended debates and makes it clear whether participants are advising, approving, or deciding.</p>
+      </section>
+
+      <section><span class="section-index">09</span><h2>Warning Signs</h2>
+        <ul class="warning-list"><li>Engineers wait for your opinion before making reversible implementation decisions.</li><li>Team Leads bring solutions for approval rather than recommendations with explicit trade-offs.</li><li>Architecture meetings end with “we all agreed” but no named owner.</li><li>Different teams unknowingly create competing solutions to the same shared problem.</li><li>You attend most technical meetings and lack time for ecosystem-level work.</li><li>Teams learn about cross-product decisions only after implementation begins.</li></ul>
+      </section>
+
+      <section id="tomorrow" class="apply"><span class="section-index">10</span><h2>Apply It Tomorrow</h2>
+        <p>Choose one upcoming technical decision—without assuming it is currently mishandled. Write its four-line decision contract. Then ask whether its decider is at the lowest appropriate level given its reversibility, blast radius, and cross-team impact.</p>
+        <button id="completeLesson" type="button"><span class="check">✓</span><span><strong>Mark Day 01 complete</strong><small>Your progress stays in this browser</small></span></button>
+      </section>
+
+      <footer class="lead-note"><span>Technical Lead Note</span><p>Delegate solutions. Retain clarity about boundaries, consequences, and ownership.</p><a href="../index.html">Return to dashboard →</a></footer>
+    </article>
+  </main>
+  <script src="lesson.js"></script>
+</body></html>
