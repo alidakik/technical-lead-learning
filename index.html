@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A progressive, practical Technical Lead curriculum for a startup software, AI, cloud, and hardware ecosystem.">
+  <title>Technical Lead Learning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Technical Lead Learning home">
+        <span class="brand-mark">TL</span>
+        <span>Technical Lead Learning</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a class="active" href="#today">Today</a>
+        <a href="#journey">Journey</a>
+        <a href="#principles">Principles</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="today">
+        <div class="hero-copy">
+          <span class="eyebrow">Day 01 · Engineering leadership</span>
+          <h1>Build the system.<br><span>Don’t become the system.</span></h1>
+          <p class="hero-intro">A progressive curriculum for leading a connected startup ecosystem across SaaS, AI, hardware, cloud, QA, and multiple engineering teams.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="lessons/day-001-decision-rights.html">Read today’s lesson <span aria-hidden="true">→</span></a>
+            <span class="read-time">20 min · practical exercise included</span>
+          </div>
+        </div>
+        <aside class="today-card" aria-label="Today's lesson">
+          <div class="card-topline"><span>Today’s focus</span><span>01 / 90</span></div>
+          <div class="focus-icon" aria-hidden="true">
+            <span class="node n1"></span><span class="node n2"></span><span class="node n3"></span><span class="node n4"></span>
+            <span class="line l1"></span><span class="line l2"></span><span class="line l3"></span>
+          </div>
+          <h2>Decision Rights &amp; Delegation</h2>
+          <p>Define who decides what—so teams move quickly without losing ecosystem alignment.</p>
+          <div class="lesson-meta"><span>Foundation</span><span>Leadership</span></div>
+        </aside>
+      </section>
+
+      <section class="progress-panel" aria-labelledby="progress-heading">
+        <div>
+          <span class="section-kicker">Your progress</span>
+          <h2 id="progress-heading">One deliberate step at a time</h2>
+        </div>
+        <div class="progress-stat">
+          <strong id="completedCount">0</strong><span>lessons completed</span>
+        </div>
+        <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="90" aria-valuenow="0">
+          <span id="progressFill"></span>
+        </div>
+        <p id="progressNote">Start with Day 01. Your progress is saved in this browser.</p>
+      </section>
+
+      <section class="journey" id="journey">
+        <div class="section-heading">
+          <div><span class="section-kicker">The journey</span><h2>A curriculum that compounds</h2></div>
+          <p>Topics rotate intentionally while later lessons revisit important ideas at greater depth.</p>
+        </div>
+        <div class="path-grid">
+          <article class="path-card current">
+            <div class="path-number">01</div>
+            <div><span class="status">Current arc · Weeks 1–3</span><h3>Lead the technical system</h3><p>Decision rights, ecosystem boundaries, requirements, risk, and concise technical communication.</p></div>
+          </article>
+          <article class="path-card">
+            <div class="path-number">02</div>
+            <div><span class="status">Weeks 4–6</span><h3>Shape architecture &amp; delivery</h3><p>Architecture evolution, integration contracts, observability, quality strategy, and pragmatic DevOps.</p></div>
+          </article>
+          <article class="path-card">
+            <div class="path-number">03</div>
+            <div><span class="status">Weeks 7–9</span><h3>Grow teams &amp; capability</h3><p>Delegation depth, Team Lead coaching, hiring, skill matrices, ownership, and engineering health.</p></div>
+          </article>
+          <article class="path-card">
+            <div class="path-number">04</div>
+            <div><span class="status">Weeks 10–12</span><h3>Operate the ecosystem</h3><p>Reliability, security, AI lifecycle, connected-device operations, capacity, and incident learning.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="dimensions" aria-labelledby="dimensions-heading">
+        <div class="section-heading compact">
+          <div><span class="section-kicker">Coverage</span><h2 id="dimensions-heading">Balanced across the role</h2></div>
+        </div>
+        <div class="dimension-grid">
+          <div><span class="dimension-dot coral"></span><strong>Architecture &amp; systems</strong><small>Software, integrations, hardware</small></div>
+          <div><span class="dimension-dot amber"></span><strong>Delivery &amp; operations</strong><small>Planning, quality, DevOps</small></div>
+          <div><span class="dimension-dot teal"></span><strong>People &amp; organization</strong><small>Leadership, hiring, growth</small></div>
+          <div><span class="dimension-dot blue"></span><strong>Decisions &amp; communication</strong><small>Alignment, trade-offs, influence</small></div>
+          <div><span class="dimension-dot violet"></span><strong>AI, security &amp; cloud</strong><small>Modern system leadership</small></div>
+        </div>
+      </section>
+
+      <section class="principles" id="principles">
+        <span class="section-kicker light">Operating principles</span>
+        <blockquote>“Your job is not to have every answer. Your job is to create the conditions in which good technical decisions are made.”</blockquote>
+        <div class="principle-grid">
+          <div><span>01</span><p>Prefer the simplest system that addresses a demonstrated need.</p></div>
+          <div><span>02</span><p>Make trade-offs explicit; architecture is a set of choices, not a diagram.</p></div>
+          <div><span>03</span><p>Push decisions to the closest capable owner while preserving ecosystem guardrails.</p></div>
+        </div>
+      </section>
+    </main>
+
+    <footer><span>Technical Lead Learning</span><span>Built as a living curriculum · 2026</span></footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
