@@ -1,0 +1,56 @@
+:root {
+  --ink: #142235;
+  --muted: #637083;
+  --paper: #f5f7f8;
+  --white: #ffffff;
+  --navy: #10283d;
+  --teal: #0c766f;
+  --teal-dark: #075b57;
+  --coral: #e66b55;
+  --amber: #e0a33c;
+  --blue: #4d78c8;
+  --violet: #8361b6;
+  --line: #dbe1e6;
+  --shadow: 0 24px 64px rgba(15, 34, 50, .11);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--ink); background: var(--paper); font: 16px/1.65 "DM Sans", sans-serif; }
+a { color: inherit; text-decoration: none; }
+.page-shell { max-width: 1440px; margin: 0 auto; background: var(--white); min-height: 100vh; box-shadow: 0 0 80px rgba(17, 31, 45, .06); }
+.topbar { height: 82px; display: flex; align-items: center; justify-content: space-between; padding: 0 6vw; border-bottom: 1px solid var(--line); }
+.brand { display: flex; align-items: center; gap: 12px; font: 700 16px/1 "Manrope", sans-serif; }
+.brand-mark { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px; color: white; background: var(--teal); font-size: 13px; letter-spacing: -.03em; }
+nav { display: flex; gap: 30px; color: var(--muted); font-size: 14px; font-weight: 600; }
+nav a:hover, nav a.active { color: var(--teal); }
+.hero { min-height: 620px; display: grid; grid-template-columns: 1.2fr .8fr; gap: 8vw; align-items: center; padding: 80px 8vw 90px; background: radial-gradient(circle at 80% 25%, rgba(12,118,111,.08), transparent 28%), linear-gradient(150deg, #fff 45%, #f0f6f5); overflow: hidden; }
+.eyebrow, .section-kicker { display: block; color: var(--teal); font: 700 12px/1.2 "Manrope", sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+h1, h2, h3, blockquote { font-family: "Manrope", sans-serif; margin-top: 0; }
+h1 { margin: 20px 0 24px; font-size: clamp(46px, 6vw, 78px); line-height: 1.04; letter-spacing: -.055em; max-width: 800px; }
+h1 span { color: var(--teal); }
+.hero-intro { color: var(--muted); max-width: 660px; font-size: 19px; line-height: 1.7; }
+.hero-actions { margin-top: 36px; display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+.button { display: inline-flex; align-items: center; gap: 20px; padding: 14px 20px; border-radius: 8px; font-weight: 700; transition: transform .2s, background .2s; }
+.button:hover { transform: translateY(-2px); }
+.button.primary { color: white; background: var(--teal); box-shadow: 0 12px 28px rgba(12,118,111,.22); }
+.button.primary:hover { background: var(--teal-dark); }
+.read-time { color: var(--muted); font-size: 13px; }
+.today-card { position: relative; padding: 30px; border-radius: 20px; background: var(--navy); color: white; box-shadow: var(--shadow); transform: rotate(1.5deg); }
+.card-topline { display: flex; justify-content: space-between; color: #9eb2c0; font-size: 12px; text-transform: uppercase; letter-spacing: .1em; }
+.focus-icon { position: relative; height: 185px; margin: 18px 0 12px; }
+.node { position: absolute; width: 38px; height: 38px; border: 7px solid var(--navy); border-radius: 50%; background: var(--coral); z-index: 2; box-shadow: 0 0 0 1px rgba(255,255,255,.15); }
+.n1 { left: 45%; top: 0; width: 52px; height: 52px; background: var(--amber); }
+.n2 { left: 14%; bottom: 4px; }.n3 { left: 46%; bottom: 4px; background: var(--teal); }.n4 { right: 12%; bottom: 4px; background: var(--blue); }
+.line { position: absolute; height: 2px; background: #597083; transform-origin: left; top: 54px; left: 49%; }
+.l1 { width: 135px; transform: rotate(132deg); }.l2 { width: 112px; transform: rotate(90deg); }.l3 { width: 138px; transform: rotate(48deg); }
+.today-card h2 { font-size: 28px; margin-bottom: 8px; }.today-card p { color: #b8c7d1; }
+.lesson-meta { display: flex; gap: 8px; margin-top: 24px; }.lesson-meta span { padding: 5px 9px; border: 1px solid #375269; border-radius: 5px; color: #aebfca; font-size: 11px; text-transform: uppercase; letter-spacing: .07em; }
+.progress-panel { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 16px 30px; margin: -35px 8vw 0; padding: 28px 34px; position: relative; border: 1px solid var(--line); border-radius: 14px; background: white; box-shadow: 0 16px 45px rgba(22, 42, 59, .08); }
+.progress-panel h2 { margin: 8px 0 0; font-size: 24px; }.progress-stat { display: flex; align-items: baseline; gap: 8px; }.progress-stat strong { color: var(--teal); font: 800 34px/1 "Manrope"; }.progress-stat span, .progress-panel p { color: var(--muted); font-size: 13px; }.progress-bar { height: 8px; grid-column: 1 / -1; overflow: hidden; border-radius: 20px; background: #e9eef0; }.progress-bar span { display: block; width: 0; height: 100%; background: linear-gradient(90deg, var(--teal), #35a89e); transition: width .5s ease; }.progress-panel p { grid-column: 1 / -1; margin: -8px 0 0; }
+.journey, .dimensions { padding: 110px 8vw 30px; }.section-heading { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 42px; }.section-heading h2 { margin: 10px 0 0; font-size: 38px; letter-spacing: -.035em; }.section-heading > p { max-width: 470px; color: var(--muted); }
+.path-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }.path-card { display: grid; grid-template-columns: 70px 1fr; gap: 20px; min-height: 190px; padding: 28px; border: 1px solid var(--line); border-radius: 12px; transition: transform .2s, box-shadow .2s; }.path-card:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(19,39,53,.08); }.path-card.current { border-color: #87c6c1; background: #f2f9f8; }.path-number { color: #aab4bd; font: 800 28px/1 "Manrope"; }.current .path-number { color: var(--teal); }.status { color: var(--teal); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }.path-card h3 { margin: 10px 0 6px; font-size: 20px; }.path-card p { color: var(--muted); margin: 0; font-size: 14px; }
+.dimensions { padding-bottom: 110px; }.section-heading.compact { margin-bottom: 28px; }.dimension-grid { display: grid; grid-template-columns: repeat(5, 1fr); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }.dimension-grid > div { min-height: 145px; padding: 24px; border-right: 1px solid var(--line); }.dimension-grid > div:last-child { border-right: 0; }.dimension-dot { display: block; width: 9px; height: 9px; margin-bottom: 28px; border-radius: 50%; }.dimension-grid strong, .dimension-grid small { display: block; }.dimension-grid strong { font-size: 14px; }.dimension-grid small { margin-top: 6px; color: var(--muted); line-height: 1.5; }.coral { background: var(--coral); }.amber { background: var(--amber); }.teal { background: var(--teal); }.blue { background: var(--blue); }.violet { background: var(--violet); }
+.principles { padding: 90px 8vw; color: white; background: var(--navy); }.section-kicker.light { color: #70c2bb; }.principles blockquote { max-width: 1000px; margin: 28px 0 55px; font-size: clamp(30px, 4vw, 50px); line-height: 1.28; letter-spacing: -.035em; }.principle-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; border-top: 1px solid #385064; padding-top: 32px; }.principle-grid div { display: grid; grid-template-columns: 30px 1fr; gap: 12px; }.principle-grid span { color: #70c2bb; font: 700 12px "Manrope"; }.principle-grid p { color: #b8c7d1; margin: 0; font-size: 14px; }
+footer { display: flex; justify-content: space-between; padding: 30px 8vw; color: var(--muted); background: #0b1d2d; border-top: 1px solid #263c4e; font-size: 12px; }
+@media (max-width: 900px) { .hero { grid-template-columns: 1fr; }.today-card { transform: none; max-width: 520px; }.dimension-grid { grid-template-columns: 1fr 1fr; }.dimension-grid > div { border-bottom: 1px solid var(--line); }.principle-grid { grid-template-columns: 1fr; gap: 24px; } }
+@media (max-width: 650px) { .topbar { padding: 0 20px; }.topbar nav { display: none; }.hero { padding: 55px 24px 75px; }.hero h1 { font-size: 44px; }.progress-panel { margin: -30px 20px 0; padding: 23px; grid-template-columns: 1fr; }.progress-stat { margin-top: 8px; }.journey, .dimensions, .principles { padding-left: 24px; padding-right: 24px; }.section-heading { display: block; }.section-heading > p { margin-top: 15px; }.path-grid { grid-template-columns: 1fr; }.path-card { grid-template-columns: 48px 1fr; }.dimension-grid { grid-template-columns: 1fr; }.dimension-grid > div { border-right: 0; }.principles { padding-top: 70px; padding-bottom: 70px; } footer { padding: 24px; gap: 14px; flex-direction: column; } }
